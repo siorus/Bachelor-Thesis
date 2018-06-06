@@ -1,0 +1,17 @@
+[Unit]
+Description=LINMON - Linux monitoring tool
+Wants= sendmail syslog
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 5
+ExecStart=/opt/linmon/linmon.py
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+User=root
+Restart=on-failure
+SyslogLevel=notice
+
+[Install]
+WantedBy=multi-user.target

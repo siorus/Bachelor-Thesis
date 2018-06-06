@@ -1,0 +1,200 @@
+% Tento soubor nahraďte vlastním souborem s přílohami (nadpisy níže jsou pouze pro příklad)
+% This file should be replaced with your file with an appendices (headings below are examples only)
+
+% Umístění obsahu paměťového média do příloh je vhodné konzultovat s vedoucím
+% Placing of table of contents of the memory media here should be consulted with a supervisor
+%\chapter{Obsah přiloženého paměťového média}
+
+%\chapter{Manuál}
+
+%\chapter{Konfigurační soubor} % Configuration file
+
+%\chapter{RelaxNG Schéma konfiguračního souboru} % Scheme of RelaxNG configuration file
+
+%\chapter{Plakát} % poster
+
+\chapter{Zoznam a činnosť implementovaných skriptov}
+\label{skripty}
+
+\begin{tabular}{ | l | l | l | }
+	\hline
+	Názov skriptu & Účel & Výstup \\ \hline
+	{dev\_pci\_change} & odpojené alebo pripojené & notifikuje administrátora\\
+	& zariadenia pci & o~zmenách zariadení \\ \hline
+	
+	{dev\_usb\_new} & nové pripojené & notifikuje administrátora\\
+	& zariadenia usb & o~zmenách zariadení \\ \hline
+	
+	{disk\_allow\_serial} & špecifikuje povolené disky & notifikuje pri pripojení iného\\
+	& na základe sériového čísla & zariadenia, ako je povolené \\ \hline
+	
+	{disk\_allow\_uuid} & špecifikuje povolené disky & notifikuje pri pripojení iného\\
+	& na základe UUID & zariadenia, ako je povolené \\ \hline
+	
+	{disk\_health\_hp} & monitoruje stav diskových polí & pri abnormálnej hodnote\\
+	& HP, fyzické a logické disky & informuje administrátora \\ \hline
+	
+	{disk\_health\_mdadm} & monitoruje stav diskových polí & pri abnormálnej hodnote\\ 
+	& vytvorených pomocou MDADM & informuje administrátora \\
+	\hline
+	
+	{disks\_smart\_mon} & {monitoruje hodnoty S.M.A.R.T} & pri nájdení abnormálnej\\ 
+	& & hodnoty informuje \\
+	& & administrátora \\ \hline
+	
+	{disk\_temp} & {monitoruje teplotu diskov}  & pri zvýšených hodnotách \\
+	&  & informuje administrátora\\
+	& & o~konkrétnom zariadení \\
+	&&a teplote  \\ \hline
+	
+	{disk\_temp\_hp} & {monitoruje teplotu diskových }  & pri zvýšených hodnotách \\
+	& {polí HP}  & informuje administrátora\\
+	& & o~konkrétnom zariadení \\
+	&&a teplote  \\ \hline
+	
+	{disk\_usage} & {sleduje zaplnenie diskov} & po prekročení zadaného prahu \\
+	& &  notifikuje administrátora \\ \hline
+	
+	{service\_alive\_stat} &{kontrola aktivity/pasivity}  & pokus o~spustenie v~prípade\\
+	&{definovaných služieb} & (ne)aktívnosti, notifikácia \\
+	& & administrátora \\ \hline
+	
+	{node\_alive} & kontrola chodu/aktivity  &  v~prípade neaktívnosti\\
+	& ďalších počítačov/clusterov &  notifikácia administrátora \\ \hline
+	
+
+\end{tabular}
+\newpage
+
+\noindent \begin{tabular}{ | l | l | l | }
+	\hline
+	Názov skriptu & Účel & Výstup \\ \hline
+	
+	\multirow{2}{*}{netcard\_ip\_change} & \multirow{2}{*}{monitoruje zmenu IP adresy} & pri zmene IP adresy \\
+	&  & notifikuje administrátora \\ \hline
+	
+	\multirow{2}{*}{netcard\_ip6\_change} & \multirow{2}{*}{monitoruje zmenu IPv6 adresy} & pri zmene IPv6 adresy \\
+	&  & notifikuje administrátora \\ \hline
+	
+	\multirow{2}{*}{netcard\_mac\_change} & \multirow{2}{*}{monitoruje zmenu MAC adresy} & pri zmene MAC adresy \\
+	&  & notifikuje administrátora \\ \hline
+	
+	
+	\multirow{2}{*}{user\_cpu\_usage} & monitoruje zaťaženie procesora & pri prekročení prahu\\
+	& užívateľom & informuje administrátora\\ \hline
+	
+	\multirow{2}{*}{user\_ram\_usage} & monitoruje vyťaženie RAM & pri prekročení prahu\\
+    & užívateľom & informuje administrátora\\ \hline
+    
+    
+    \multirow{2}{*}{group\_cpu\_usage} & monitoruje zaťaženie procesora & pri prekročení prahu\\
+    & používateľov z~definovanej skupiny & informuje administrátora\\ \hline
+    
+    \multirow{2}{*}{group\_ram\_usage} & monitoruje vyťaženie RAM & pri prekročení prahu\\
+    & používateľov z~definovanej skupiny & informuje administrátora\\ \hline
+	
+	
+	\multirow{2}{*}{proc\_cpu\_mon} & monitoruje zaťaženie procesora & pri prekročení prahu\\
+	& definovaným procesom &informuje administrátora\\ \hline
+	
+    \multirow{2}{*}{proc\_ram\_mon} & monitoruje využitie RAM & pri prekročení prahu\\
+	& definovaným procesom &informuje administrátora\\ \hline
+	
+	\multirow{2}{*}{cpu\_mon} & monitoruje zaťaženie procesora & pri prekročení prahu\\
+	&  & notifikuje administrátora\\ \hline
+	
+	\multirow{2}{*}{ram\_free\_mon} & monitoruje množstvo voľnej  & pri poklese pamäti pod\\
+	& pamäti RAM &definovaný prah notifikuje \\
+	& &administrátora\\ \hline
+
+	\multirow{2}{*}{ram\_used\_mon} & monitoruje množstvo zabranej  & pri prekročení \\
+	& pamäti RAM &definovaného prahu  \\
+	& &notifikuje administrátora\\ \hline
+	
+	\multirow{2}{*}{swap\_mon} & monitoruje množstvo voľného  & pri poklese pamäti pod\\
+	& miesta v~SWAP &  definovaný prah \\
+	&&notifikuje administrátora\\ \hline
+	
+	\multirow{5}{*}{rsyslog\_apache} & “Client sent malfromed & \multirow{5}{*}{notifikácia administrátora}\\
+	& Host header” & \\ \cline{2-2}
+	& Resource temporarily &  \\ 
+	& unavailable: fork & \\ \cline{2-2}
+	& Pokus o~prístup k~/etc/passwd & \\ \hline
+	
+	\multirow{7}{*}{rsyslog\_auth} & 3 incorrect password attempts & \multirow{7}{*}{notifikácia administrátora}\\ \cline{2-2}
+	& Failed password for & \\ \cline{2-2}
+	& FAILED su for &  \\ \cline{2-2}
+	& Illegal user & \\ \cline{2-2}
+	& Invalid user & \\ \cline{2-2}
+	& Did not receive & \\
+	& identification string from & \\ \hline
+	
+	\multirow{3}{*}{rsyslog\_smart} & Pending Sectors &  \multirow{3}{*}{notifikácia administrátora} \\ \cline{2-2}
+	& Uncorectable errors &  \\ \cline{2-2}
+	& Prefailure attribute &  \\ \hline
+	
+	\multirow{2}{*}{rsyslog\_openvpn} & Username/Password  &  \multirow{2}{*}{notifikácia administrátora} \\
+	& verification failed &  \\ \hline
+	
+
+\end{tabular}
+
+
+\noindent \begin{tabular}{ | l | l | l | }
+	\hline
+	Názov skriptu & Účel & Výstup \\ \hline
+	{rsyslog\_dovecot} & imap-login: Aborted login & {notifikácia administrátora}\\ \cline{2-2}
+	& pop3-login: Aborted login & \\ \cline{2-2}
+	& Can't contact LDAP server &  \\ \cline{2-2}
+	& Can't connect to server & \\ \hline
+	
+	{rsyslog\_postfix} & Improper use of SMTP  &  {notifikácia administrátora} \\
+	& command pipelining &  \\ \cline{2-2}
+	& Insufficient system storagee &  \\ \hline
+	
+	{rsyslog\_postgre} & password authentication failed for user  &  {notifikácia administrátora}  \\ \hline
+	
+	{rsyslog\_sendmail} & rejected commands from x.x.x.x  & {notifikácia administrátora}\\
+	& due to pre-greeting traffic & \\ \cline{2-2}
+	& Connection rate limit exceeded &  \\ \cline{2-2}
+	& rejecting connections on  & \\ 
+	& daemon MTA: load average & \\ \cline{2-2}
+	& runqueue: Aborting queue run:  & \\ 
+	& load average too high & \\ \hline
+	 
+	{rsyslog\_universal} & Hľadá zhodu s~definovaným    & {pri nájdení zhody}\\
+	& regulárnym výrazom & {notifikácia administrátora}\\ 
+	& v~špecifikovanom súbore syslog &  \\ 
+	& zadanými pomocou prepínačov.  & \\ 
+	& Slúži na nájdenie akéhokoľvek & \\
+	& vzoru z~ľubovoľného syslog  & \\ 
+	& súboru, ktorý nie je definovaný & \\
+	& skriptami popísanými vyššie. & \\ \hline
+	
+\end{tabular}
+
+\newpage
+
+\chapter{Obsah CD}
+\label{cd}
+\begin{itemize}
+	\item \texttt{src/}
+	\begin{itemize}
+		\item \texttt{aux\_scripts/}\,--\,Pomocné skripty.
+		\item \texttt{configs/}\,--\,Konfiguračné súbory pre skripty.
+		\item \texttt{example\_scripts/}\,--\,Skripty s~komentármi na demonštráciu vytvorenia nových skriptov.	
+		\item \texttt{init\_scripts/}\,--\,Skripty pre init systémy.
+		\item \texttt{monitoring\_scripts/}\,--\,Monitorovacie moduly.
+		\item \texttt{packages/}\,--\,Podporné moduly.
+		\item \texttt{syslog\_scripts/}\,--\,Moduly monitorujúce záznamy syslog.
+		\item \texttt{fabfile.py}\,--\,Python Fabric skript na nasadenie.
+		\item \texttt{install.py}\,--\,Skript zabezpečujúci inštaláciu a odinštaláciu.
+		\item \texttt{linmon.py}\,--\,Hlavný monitorovací a notifikačný skript.
+		\item \texttt{README.md}\,--\,Návod na inštaláciu, prácu s~nástrojom a tvorbu nových skriptov.
+   \end{itemize}
+	\item \texttt{doc/}
+	\begin{itemize}
+		\item \texttt{src/}\,--\,Zdrojové súbory technickej správy.
+		\item \texttt{xkorce01-Monitorovani-behu-OS-Linux.pdf}\,--\,Technická správa vo formáte PDF.
+	\end{itemize}
+\end{itemize}
